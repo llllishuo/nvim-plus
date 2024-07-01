@@ -1,0 +1,12 @@
+{
+  "Main": {
+    "prefix": ["main", "\\main"],
+    "body": [
+      "\\documentclass[a4paper, 12pt]{article}",
+      "\\begin{document}",
+      "$0",
+      "\\end{document}"
+    ],
+    "description": "main"
+  }
+}
