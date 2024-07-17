@@ -1,5 +1,9 @@
 HOME = os.getenv("HOME")
 
+
+
+
+
 vim.opt.termguicolors = true
 vim.opt.cursorline = true
 vim.opt.updatetime = 200

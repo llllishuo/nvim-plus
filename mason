@@ -1,0 +1,43 @@
+asmfmt
+ bash-debug-adapter
+ bash-language-server bashls
+ bibtex-tidy
+ clangd
+ cmake-language-server cmake
+ cmakelang
+ cmakelint
+ cpplint
+ cpptools
+ dockerfile-language-server dockerls
+ eslint-lsp eslint
+ eslint_d
+ html-lsp html
+ htmlhint
+ java-debug-adapter
+ js-debug-adapter
+ latexindent
+ ltex-ls ltex
+ lua-language-server lua_ls
+ luau-lsp luau_lsp
+ lwc-language-server lwc_ls
+ markuplint
+ nextls
+ nxls
+ prettier
+ pylyzer
+ pyright
+ rust-analyzer rust_analyzer
+ rust_hdl vhdl_ls
+ rustfmt
+ rustywind
+ shfmt
+ stylua
+ taplo
+ texlab
+ ts-standard
+ typescript-language-server tsserver
+ vale
+ vtsls
+ vue-language-server volar
+
+
