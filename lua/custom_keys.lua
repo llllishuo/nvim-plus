@@ -95,6 +95,6 @@ return {
 	save = "<leader>w",
 
 	-- Esc
-	esc = "<>"
+	esc = "<Esc>"
 
 }

@@ -10,8 +10,8 @@ local function set_keymap()
 	-- set keybinds for both INSERT and VISUAL.
 	-- map({ "i", "s" }, "<C-i>", "<Plug>luasnip-next-choice",option)
 
-	-- Esc
-	map("n", keys.esc, "<Esc>", option)
+	-- return to normal Esc
+	map("n", keys.esc, "<C-\\><C-n>", option)
 
 	-- quit and save
 	map("n", keys.quit_all, ":qa!<CR>", option)
