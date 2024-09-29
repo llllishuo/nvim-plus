@@ -11,7 +11,7 @@ local function set_keymap()
 	-- map({ "i", "s" }, "<C-i>", "<Plug>luasnip-next-choice",option)
 
 	-- return to normal Esc
-	map("n", keys.esc, "<C-\\><C-n>", option)
+	-- map("n", keys.esc, "<C-\\><C-n>", option)
 
 	-- quit and save
 	map("n", keys.quit_all, ":qa!<CR>", option)
