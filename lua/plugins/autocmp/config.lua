@@ -29,13 +29,17 @@ return function()
 				col_offset = -3,
 				side_padding = 0,
 			}),
-            documentation = cmp.config.window.bordered({
-				border = "rounded",
-				winhighlight = "",
+			documentation = cmp.config.window.bordered({
+				focusable = false,
+				relative = "editor",
+				anchor = "SW",
+				zindex = 50, 
+				win_options = {
+					winhighlight = "NormalFloat:NormalFloat,FloatBorder:FloatBorder",
+				},
 			}),
 		},
-		formatting = {
-		},
+		formatting = {},
 		mapping = cmp.mapping.preset.insert({
 			[keys.doc_up] = cmp.mapping.scroll_docs(-4),
 			[keys.doc_down] = cmp.mapping.scroll_docs(4),
