@@ -2,6 +2,8 @@ return function()
 	local cmp = require("cmp")
 	local ls = require("luasnip")
 	local keys = require("custom_keys")
+	local types = require("cmp.types")
+	local str = require("cmp.utils.str")
 
 	cmp.setup({
 		snippet = {
@@ -22,19 +24,17 @@ return function()
 		},
 		window = {
 			completion = cmp.config.window.bordered({
-				border = "rounded",
-				winhighlight = "",
+				border = "double",
 				minwidth = 60,
+				col_offset = -3,
+				side_padding = 0,
 			}),
-			documentation = cmp.config.window.bordered({
+            documentation = cmp.config.window.bordered({
 				border = "rounded",
 				winhighlight = "",
 			}),
 		},
 		formatting = {
-			format = require("lspkind").cmp_format({
-				mode = "symbol_text",
-			}),
 		},
 		mapping = cmp.mapping.preset.insert({
 			[keys.doc_up] = cmp.mapping.scroll_docs(-4),
@@ -50,35 +50,23 @@ return function()
 				end
 			end,
 		}),
-		sources = cmp.config.sources({
-			{ name = "nvim_lsp" },
-			{ name = "vsnip" },
-		}, {
-			{ name = "buffer" },
-			{ name = "path" },
-		}),
+		sources = cmp.config.sources(
+			{ { name = "nvim_lsp" }, { name = "vsnip" } },
+			{ { name = "buffer" }, { name = "path" } }
+		),
 	})
 
 	-- `/` cmdline setup.
 	cmp.setup.cmdline("/", {
 		mapping = cmp.mapping.preset.cmdline(),
-		sources = {
-			{ name = "buffer" },
-		},
+		sources = { { name = "buffer" } },
 	})
 
 	-- `:` cmdline setup.
 	cmp.setup.cmdline(":", {
 		mapping = cmp.mapping.preset.cmdline(),
-		sources = cmp.config.sources({
-			{ name = "path" },
-		}, {
-			{
-				name = "cmdline",
-				option = {
-					ignore_cmds = { "Man", "!" },
-				},
-			},
+		sources = cmp.config.sources({ { name = "path" } }, {
+			{ name = "cmdline", option = { ignore_cmds = { "Man", "!" } } },
 		}),
 	})
 

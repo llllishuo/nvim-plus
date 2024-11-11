@@ -90,8 +90,8 @@ return {
 	-- quit and save 
 	quit_all = "Q",
 	write_quit_all = "WQ",
-	quit = "q",
-	write_quit = "wq",
+	quit = "<leader>q",
+	write_quit = "<leader>wq",
 	save = "<leader>w",
 
 	-- Esc

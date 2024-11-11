@@ -3,7 +3,6 @@ return {
     lazy = false,
     opt = true,
     config = function()
-        require("transparent").toggle(false)
-        
+        require("transparent").toggle(true)
     end,
 }
